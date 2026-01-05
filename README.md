@@ -41,9 +41,21 @@ You can run your application in dev mode that enables live coding using:
 ./mvnw quarkus:dev
 ```
 
+The application will start at <http://localhost:8080>
+
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
-## API Usage
+## Using the Application
+
+### Web Interface
+
+Open your browser and navigate to <http://localhost:8080> to access the minimalistic chat interface. You can:
+
+- Ask about flights (e.g., "Find flights from JFK to LAX on 2025-01-15")
+- Check flight status (e.g., "What's the status of flight AA100?")
+- Get baggage information (e.g., "What's the baggage allowance for business class?")
+
+### API Usage
 
 ### Chat with the Assistant
 
