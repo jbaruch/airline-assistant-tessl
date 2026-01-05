@@ -1,8 +1,37 @@
-# assistant
+# Airline Assistant
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+An AI-powered airline customer service assistant built with Quarkus, langchain4j, and Tessl.
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+## Features
+
+- AI-powered chat interface using OpenAI GPT-4
+- Flight search and booking assistance
+- Real-time flight status information
+- Baggage information queries
+- Session-based conversation context
+- RESTful API endpoints
+
+## Tech Stack
+
+- **Quarkus** - Supersonic Subatomic Java Framework
+- **langchain4j** - AI/LLM integration framework
+- **OpenAI GPT-4** - Language model for natural conversations
+- **Tessl** - Context management and AI-assisted development
+- **Jakarta REST** - RESTful web services
+
+## Prerequisites
+
+- JDK 21 or later
+- Maven 3.9+
+- OpenAI API key
+
+## Configuration
+
+Set your OpenAI API key as an environment variable:
+
+```bash
+export OPENAI_API_KEY=your-api-key-here
+```
 
 ## Running the application in dev mode
 
@@ -13,6 +42,25 @@ You can run your application in dev mode that enables live coding using:
 ```
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
+
+## API Usage
+
+### Chat with the Assistant
+
+```bash
+curl -X POST http://localhost:8080/api/assistant/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "I need a flight from JFK to LAX tomorrow",
+    "sessionId": "user-123"
+  }'
+```
+
+### Example Queries
+
+- "Search for flights from New York to Los Angeles on 2025-01-15"
+- "What's the status of flight AA100?"
+- "What's the baggage allowance for economy class?"
 
 ## Packaging and running the application
 
